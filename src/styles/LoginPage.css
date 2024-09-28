@@ -1,4 +1,5 @@
-.body-login{
+/* Desktop */
+.body-login {
     width: 100%;
     height: 100vh;
     margin: 0 auto;
@@ -7,31 +8,33 @@
     align-items: center;
 }
 
-.container-login{
+.container-login {
     width: 280px;
     height: 400px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-   
+    box-shadow: 0 10px 30px 0px #d9d9d9;
+    padding: 40px;
+    border-radius: 20px;
 }
 
-form{
+form {
     width: 100%;
 }
 
-.form-title{
+.form-title {
     display: block;
     font-size: 40px;
     font-weight: bold;
     color: black;
     line-height: 1.2;
     text-align: center;
-    padding: 20px;
+    
 }
 
-input{
+input {
     outline: none;
     border: none;
     width: 100%;
@@ -40,19 +43,21 @@ input{
     text-align: center;
     color: gray;
 }
+
 ::placeholder {
     color: #d9d9d9;
     opacity: 1;
     font-size: 20px;
-  }
-.input-box{
+}
+
+.input-box {
     position: relative;
     border-bottom: 2px solid #d9d9d9;  
     margin-bottom: 34px;
     margin-top: 34px;
 }
 
-.btn-login{
+.btn-login {
     width: 100%;
     height: 46px;
     margin-top: 40px;
@@ -62,11 +67,55 @@ input{
     color: white;
     font-weight: bolder;
     font-size: 20px;
-   box-shadow:  0 10px 30px 0px black;
+    box-shadow: 0 10px 30px 0px black;
 }
 
-.btn-login:hover{
-    background-color: 	#008000;
-    box-shadow:  0 10px 30px 0px 	#008000;
+.btn-login:hover {
+    background-color: #008000;
+    box-shadow: 0 10px 30px 0px #008000;
     color: white;
+}
+
+/* mobile */
+@media screen and (max-width: 480px) {
+    .container-login {
+        width: 90%; 
+        height: auto;
+    }
+
+    .form-title {
+        font-size: 30px; 
+    }
+
+    input {
+        height: 35px; 
+        font-size: 18px;
+    }
+
+    .btn-login {
+        height: 40px;
+        font-size: 18px;
+    }
+}
+
+/* laptop */
+@media screen and (min-width: 1024px) {
+    .container-login {
+        width: 400px; 
+        height: 500px;
+    }
+
+    .form-title {
+        font-size: 45px; 
+    }
+
+    input {
+        height: 50px;
+        font-size: 22px;
+    }
+
+    .btn-login {
+        height: 50px; 
+        font-size: 22px;
+    }
 }
