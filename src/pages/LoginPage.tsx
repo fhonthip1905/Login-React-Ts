@@ -28,29 +28,35 @@ export default function LoginPage() {
   };
 
   return (
-      <div className="container-login">
-        <form className="form-login" action="">
-          <div className="form-title">Login</div>
-          {error && <p className="text-error">{error}</p>}
-          <div className="input-box">
-            <input
-              type="text"
-              placeholder="Username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-          </div>
-          <div className="input-box">
-            <input
-              type="password"
-              placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-          <button type="button" className="btn-login" onClick={handleOnclickLogin}>LOGIN</button>
-          {success && <p className="text-success">{success}</p>}
-        </form>
-      </div>
+    <div className="container-login">
+      <form className="form-login" action="">
+        <div className="form-title">Login</div>
+        {error && <p className="text-error">{error}</p>}
+        <div className="input-box">
+          <input
+            type="text"
+            placeholder="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+        </div>
+        <div className="input-box">
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
+        <button
+          type="button"
+          className="btn-login"
+          onClick={handleOnclickLogin}
+        >
+          LOGIN
+        </button>
+        {success && <p className="text-success">{success}</p>}
+      </form>
+    </div>
   );
 }

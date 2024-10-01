@@ -1,20 +1,20 @@
 import { useNavigate } from "react-router-dom";
 import "../styles/DashboardPage.css";
 import { useEffect, useState } from "react";
-import { users } from "../data/users";
+import { User, users } from "../data/users";
 
 export default function DashboardPage() {
   const navigate = useNavigate();
-  const [userList, setUserList] = useState('');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [isUser, setIsUser] = useState('');
+  const [userList, setUserList] = useState<User[]>([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [isUser, setIsUser] = useState<User | null>(null);
   const [hasSearched, setHasSearched] = useState(false);
 
   // ตรวจสอบว่าผู้ใช้ล็อกอินหรือไม่
   useEffect(() => {
     const userData = localStorage.getItem("user");
     if (userData) {
-      const user = JSON.parse(userData) as User;
+      const user = JSON.parse(userData);
       setIsUser(user);
     } else {
       navigate("/");
