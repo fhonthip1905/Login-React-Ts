@@ -21,7 +21,7 @@ export default function LoginPage() {
       setSuccess(`Welcome ${user.name}!`);
       setTimeout(() => {
         navigate("/dashboard");
-      }, 3000);
+      }, 2000);
     } else {
       setError("Invalid email or password! Please check your entries.");
     }

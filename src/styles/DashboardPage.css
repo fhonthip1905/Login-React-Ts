@@ -135,6 +135,10 @@ input {
     padding: 10px;
   }
 
+  .logout {
+    justify-content: center;
+  }
+
   .btn-logout {
     width: 200px;
     font-size: 14px;
@@ -170,10 +174,6 @@ input {
 
   .result-table {
     padding: 5px;
-  }
-
-  .logout {
-    justify-content: center;
   }
 
   .btn-logout {
