@@ -10,6 +10,7 @@ export default function LoginPage() {
   const [success, setSuccess] = useState("");
   const navigate = useNavigate();
 
+  // ฟังก์ชัน login
   const handleOnclickLogin = () => {
     const user = users.find(
       (e) => e.username === username && e.password === password
